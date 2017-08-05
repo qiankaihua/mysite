@@ -1,2 +1,0 @@
-# mysite
-my-personal-site
