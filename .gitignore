@@ -1,4 +1,5 @@
 vendor/*/
+vendor/*.php
 node_modules/
 npm-debug.log
 
