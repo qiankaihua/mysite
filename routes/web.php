@@ -15,20 +15,25 @@ Route::get('/', function () {
     return view('index', ['title' => 'test', 'main_content' => 'first_test', 'blog_id' => '0']);
 });
 
-Route::get('/blog', function () {
+Route::get('blog', function () {
     return view('blog');
 });
 
-Route::get('/mydetail', function () {
+Route::get('mydetail', function () {
     return view('mydetail');
 });
 
 
-
-Route::get('/login', function () {
-    return view('login');
+Route::get('admin', function () {
+    return view('admin.admin');
 });
 
-Route::get('/addblog', function () {
-    return view('addblog');
+Route::any('addblog', function () {
+    return view('blog.addblog');
+});
+
+Route::any('blog/bloglist', 'RouteController@showlist');
+
+Route::get('login', function () {
+    return view('login');
 });

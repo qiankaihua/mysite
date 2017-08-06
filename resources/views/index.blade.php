@@ -144,7 +144,7 @@
                                 </ul>
                               </div>
                               <div class="primary-button">
-                                <a href="/blog/{{$blog_id}}">Discover More</a>
+                                <a href="/blog/bloglist">Discover More</a>
                               </div>
                             </div>
                           </div>
@@ -153,7 +153,10 @@
                     </div>
                   </div>                  
                 </div>
+                <div>
+                </div>
               </div>
+              
             </li>
 
             <li>
