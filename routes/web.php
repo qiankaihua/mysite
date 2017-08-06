@@ -22,3 +22,13 @@ Route::get('/blog', function () {
 Route::get('/mydetail', function () {
     return view('mydetail');
 });
+
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/addblog', function () {
+    return view('addblog');
+});
