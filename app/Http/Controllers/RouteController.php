@@ -14,7 +14,11 @@ class RouteController extends Controller
     }
     public function showlist() {
         $title = 'titl<a href="https://www.baidu.com/">e1</a>';
-        return view('blog.list')->with('title', $title);
+        $intro = 'in<sup>tro</sup>';
+        return view('blog.list', [
+            'title' => $title,
+            'intro' => $intro,
+        ]);
     }
 
 }

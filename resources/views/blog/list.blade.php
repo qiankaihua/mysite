@@ -7,5 +7,6 @@
 <body>
 <h1>这是blog列表页面</h1>
 <h1>{!! $title !!}</h1>
+<p>{!! $intro !!}</p>
 </body>
 </html>
