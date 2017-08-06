@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 
 //blog
-
+/*
 Route::get('/bloglist', '');
 
 Route::post('/blog/add', '');
@@ -25,3 +25,4 @@ Route::get('/blog/{blog_id}', '');
 Route::delete('/blog/{blog_id}', '');
 
 Route::put('/blog/{blog_id}', '');
+*/
