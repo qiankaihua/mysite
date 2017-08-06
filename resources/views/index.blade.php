@@ -40,7 +40,7 @@
                 <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Welcome</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/about-icon.png"></div><h6>About Me</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/featured-icon.png"></div><h6>Blog</h6></a></li>
-                <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>Projects</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>Pictrue</h6></a></li>
                 <li><a href="#0"><div class="image-icon"><img src="img/contact-icon.png"></div><h6>Contact Me</h6></a></li>
               </ul>
             </nav> 
@@ -50,7 +50,7 @@
 
             <li class="selected">
               <div class="heading">
-                <h1>Qian KAihua's Home</h1>
+                <h1>Qian Kaihua's Home</h1>
                 <span>欢迎来到我的个人网站</span>
               </div>
               <div class="cd-full-width first-slide">
@@ -58,10 +58,10 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="content first-content">
-                        <h4>Let’s Talk More About Newline</h4>
-                        <p>Newline is free CSS template by templatemo. Credits go to <a href="https://videos.pexels.com/videos/busy-street-in-the-city-1089" target="_blank">Pexels.com</a> for a video background and <a href="http://unsplash.com" target="_blank">Unsplash</a> for images. Please tell your friends about templatemo and this is a way to help back. Thank you. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum convallis mi. In dapibus auctor dictum donec mattis quis eros ultricies feugiat.</p>
+                        <h4>关于网站</h4>
+                        <p>始建于2017.08.06，现仅有主页供浏览，功能正在逐步更新中......</p>
                         <div class="primary-button">
-                          <a href="#">Discover More</a>
+                          <!--a href="#">Discover More</a-->
                         </div>
                       </div>
                     </div>
@@ -118,8 +118,8 @@
 
             <li>
               <div class="heading">
-                <h1>Featured</h1>
-                <span>We produce featured product every week</span> 
+                <h1>Blog</h1>
+                <span>记录生活中的点滴，记录工作中的心得</span> 
               </div>
               <div class="cd-half-width third-slide">
                 <div class="container">
@@ -132,8 +132,8 @@
                           </div>
                           <div class="col-md-5">
                             <div class="right-feature-text">
-                              <h4>Featured Product: <em>Newline</em></h4>
-                              <p>Lorem ipsum dolor amet, consecte adipiscing elit, quisque dictum convallis mi. In dapibus auctor dictum donec mattis quis eros ultricies feugiat. Morbi congue faucibus mi, ague blandit curabitur ac lacinia.</p>
+                              <h4>最新日志: <em>{{$title}}</em></h4>
+                              <p>{{$main_content}}</p>
                               <div class="feature-list">
                                 <ul>
                                   <p>- Suspendisse mattis finibus sem</p>
@@ -144,7 +144,7 @@
                                 </ul>
                               </div>
                               <div class="primary-button">
-                                <a href="#">Discover More</a>
+                                <a href="/blog/{{$blog_id}}">Discover More</a>
                               </div>
                             </div>
                           </div>
@@ -158,8 +158,8 @@
 
             <li>
               <div class="heading">
-                <h1>Our projects</h1>
-                <span>Here you can check our recent projects</span> 
+                <h1>My Picture</h1>
+                <span>在这里你可以看到我的照片</span> 
               </div>
               <div class="cd-half-width fourth-slide">
                 <div class="container">
@@ -263,9 +263,7 @@
 
 
         <footer>
-          <p>Copyright &copy; 2017 Your Company 
-                                
-        	| More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+          <p>Copyright &copy; 2017 Qian Kaihua </p>
         </footer>
     
         <script src="js/vendor/jquery-1.11.2.min.js"></script>

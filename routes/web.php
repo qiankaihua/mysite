@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', ['title' => 'test', 'main_content' => 'first_test', 'blog_id' => '0']);
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/mydetail', function () {
+    return view('mydetail');
 });
