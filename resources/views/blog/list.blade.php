@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog列表</title>
-    </head>
-<body>
-<h1>这是blog列表页面</h1>
-<h1>{!! $title !!}</h1>
-<p>{!! $intro !!}</p>
-</body>
-</html>
+@extends('blog.index')
+@section('title')
+    {{ $name }}
+@endsection
+@section('content')
+    @foreach($blogs as $blog)
+        <h1>{!! $blog->title !!}</h1>
+        <p>{!! str_limit($blog->content, $limit = 10, $end = '...') !!}</p>
+        <a href= {{ "/blog/".$blog->id }}>view more</a>
+        <hr>
+    @endforeach
+@endsection

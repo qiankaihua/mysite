@@ -12,6 +12,12 @@ class RouteController extends Controller
         //return view('admin', $blogs);
         return view('admin');
     }
+    public function showindex() {
+        $blogs = Blog::all()->take(5);
+        $newblog = Blog::all()->last();
+        return view('index', compact('newblog', 'blogs'));
+    }
+    /*
     public function showlist() {
         $title = 'titl<a href="https://www.baidu.com/">e1</a>';
         $intro = 'in<sup>tro</sup>';
@@ -20,5 +26,6 @@ class RouteController extends Controller
             'intro' => $intro,
         ]);
     }
+    */
 
 }

@@ -11,29 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index', ['title' => 'test', 'main_content' => 'first_test', 'blog_id' => '0']);
-});
+//主页
+Route::get('/', 'RouteController@showindex');
 
-Route::get('blog', function () {
-    return view('blog');
-});
-
+//我的信息
 Route::get('mydetail', function () {
     return view('mydetail');
 });
 
-
+//管理页面
 Route::get('admin', function () {
     return view('admin.admin');
 });
 
+//添加blog
 Route::any('addblog', function () {
     return view('blog.addblog');
 });
 
-Route::any('blog/bloglist', 'RouteController@showlist');
+//获取blog列表
+Route::any('blog/bloglist', 'BlogController@showlist');
 
+//获取blog详情
+Route::get('blog/{id}','BlogController@show');
+
+//登录
 Route::get('login', function () {
     return view('login');
 });

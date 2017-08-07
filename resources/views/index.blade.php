@@ -132,15 +132,13 @@
                           </div>
                           <div class="col-md-5">
                             <div class="right-feature-text">
-                              <h4>最新日志: <em>{{$title}}</em></h4>
-                              <p>{{$main_content}}</p>
+                              <h4>最新日志: <em>{{$newblog->title}}</em></h4>
+                              <p>{!! str_limit($newblog->content, $limit = 10, $end = '...') !!}</p>
                               <div class="feature-list">
                                 <ul>
-                                  <p>- Suspendisse mattis finibus sem</p>
-                                  <p>- Pellentesque et urna vel lectus</p>
-                                  <p>- Vestibulum iaculis nisi dui</p>
-                                  <p>- Donec sagittis eros , ac tempus ligula</p>
-                                  <p>- Integer sapien risus, auctor</p>
+                                  @foreach($blogs as $blog)
+                                    <p><a href={{ "/blog/".$blog->id }}>{{ $blog->title }}</a></p>
+                                  @endforeach
                                 </ul>
                               </div>
                               <div class="primary-button">

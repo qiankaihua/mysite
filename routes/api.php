@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 //Route::get('/bloglist', '');
 
 Route::post('/blog/add', 'BlogController@store');
+
 /*
 Route::get('/blog/{blog_id}', '');
 
