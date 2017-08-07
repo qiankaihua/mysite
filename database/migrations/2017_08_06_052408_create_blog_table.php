@@ -16,7 +16,7 @@ class CreateBlogTable extends Migration
         Schema::create('blog', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('intro');
+            $table->text('intro')->nullable();
             $table->text('content');
             $table->string('img_url')->nullable();
             $table->softDeletes();
