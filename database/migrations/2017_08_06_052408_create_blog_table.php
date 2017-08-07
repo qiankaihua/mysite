@@ -20,7 +20,7 @@ class CreateBlogTable extends Migration
             $table->text('content');
             $table->string('img_url')->nullable();
             $table->softDeletes();
-            $table->timestamps('published_at');
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

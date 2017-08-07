@@ -8,12 +8,12 @@
         <hr>
         <p style="text-align: left">{!! $blog->content !!}</p>
         @if($lastblog->id === $blog->id)
-            <p>上一篇：<a href="">已经是最前面一篇了</a></p>
+            <p>上一篇：<a href="" id="disabled">已经是最前面一篇了</a></p>
         @else
             <p>上一篇：<a href= {{ "/blog/".$lastblog->id }}>{{$lastblog->title}}</a></p>
         @endif
         @if($nextblog->id === $blog->id)
-            <p>下一篇：<a href="">已经是最后面一篇了</a></p>
+            <p>下一篇：<a href="" id="disabled">已经是最后面一篇了</a></p>
         @else
             <p>下一篇：<a href= {{ "/blog/".$nextblog->id }}>{{$nextblog->title}}</a></p>
         @endif

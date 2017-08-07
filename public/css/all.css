@@ -2963,3 +2963,6 @@ a:hover {
     text-shadow: 5px 5px 5px rgb(0, 255, 0);
     filter: alpha(opacity=40);
 }
+#disabled {
+    pointer-events: none;
+}
