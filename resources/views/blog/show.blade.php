@@ -3,7 +3,8 @@
     {{ $blog->title }}
 @endsection
 @section('content')
-<div class="cd-full-width first-slide container row col-md-12 content first-content" style="margin-top: 40px; margin-left: 100px; margin-right: 100px;">
+<div style="text-align: center">
+<div class="cd-full-width container row col-md-12 content first-content" style="margin-top: 80px !important; margin: 0 auto">
         <h1>{!! $blog->title !!}</h1>
         <hr>
         <p style="text-align: left; word-wrap: break-word;">{!! $blog->content !!}</p>
@@ -20,5 +21,6 @@
         <li class="menu-item">
             <a href= {{ "/blog/bloglist?page=".(($blog->id + 9 - (($blog->id+9)%10))/10) }}>回到blog列表</a>
         </li>
+</div>
 </div>
 @endsection
