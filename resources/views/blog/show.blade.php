@@ -3,10 +3,10 @@
     {{ $blog->title }}
 @endsection
 @section('content')
-<div class="cd-full-width first-slide container row col-md-12 content first-content" style="margin-top: 40px">
+<div class="cd-full-width first-slide container row col-md-12 content first-content" style="margin-top: 40px; margin-left: 100px; margin-right: 100px;">
         <h1>{!! $blog->title !!}</h1>
         <hr>
-        <p style="text-align: left">{!! $blog->content !!}</p>
+        <p style="text-align: left; word-wrap: break-word;">{!! $blog->content !!}</p>
         @if($lastblog->id === $blog->id)
             <p>上一篇：<a href="" id="disabled">已经是最前面一篇了</a></p>
         @else
