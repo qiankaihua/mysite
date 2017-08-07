@@ -1,3 +1,65 @@
+<?php
+function isMobile(){   
+    // 如果有HTTP_X_WAP_PROFILE则一定是移动设备  
+    if (isset ($_SERVER['HTTP_X_WAP_PROFILE'])){  
+        return TRUE;  
+    }  
+    // 如果via信息含有wap则一定是移动设备,部分服务商会屏蔽该信息  
+    if (isset ($_SERVER['HTTP_VIA'])){  
+        return stristr($_SERVER['HTTP_VIA'], "wap") ? TRUE : FALSE;// 找不到为flase,否则为TRUE  
+    }   
+    // 判断手机发送的客户端标志,兼容性有待提高  
+    if (isset ($_SERVER['HTTP_USER_AGENT'])) {  
+        $clientkeywords = array (  
+            'mobile',  
+            'nokia',  
+            'sony',  
+            'ericsson',  
+            'mot',  
+            'samsung',  
+            'htc',  
+            'sgh',  
+            'lg',  
+            'sharp',  
+            'sie-',  
+            'philips',  
+            'panasonic',  
+            'alcatel',  
+            'lenovo',  
+            'iphone',  
+            'ipod',  
+            'blackberry',  
+            'meizu',  
+            'android',  
+            'netfront',  
+            'symbian',  
+            'ucweb',  
+            'windowsce',  
+            'palm',  
+            'operamini',  
+            'operamobi',  
+            'openwave',  
+            'nexusone',  
+            'cldc',  
+            'midp',  
+            'wap'  
+            );   
+        // 从HTTP_USER_AGENT中查找手机浏览器的关键字  
+        if (preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT']))){  
+            return TRUE;  
+        }  
+    }  
+    if (isset ($_SERVER['HTTP_ACCEPT'])){ // 协议法，因为有可能不准确，放到最后判断  
+        // 如果只支持wml并且不支持html那一定是移动设备  
+        // 如果支持wml和html但是wml在html之前则是移动设备  
+        if ((strpos($_SERVER['HTTP_ACCEPT'], 'vnd.wap.wml') !== FALSE) && (strpos($_SERVER['HTTP_ACCEPT'], 'text/html') === FALSE || (strpos($_SERVER['HTTP_ACCEPT'], 'vnd.wap.wml') < strpos($_SERVER['HTTP_ACCEPT'], 'text/html')))){  
+            return TRUE;  
+        }  
+    }  
+    return FALSE;  
+}
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -17,20 +79,22 @@
         <link rel="stylesheet" href="css/templatemo-style.css">
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+        
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
 
         <div class="overlay"></div>
+        @if(!isMobile())
         <section class="top-part">
           <video controls autoplay loop>
             <source src="videos/video.mp4" type="video/mp4">
             <source src="videos/video.ogg" type="video/ogg">
           Your browser does not support the video tag.
           </video>
-        </section>
         
+        </section>
+        @endif
         <section class="cd-hero">
 
           <div class="cd-slider-nav">
