@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function show(Request $request, $blog_id) {
-        $blog = Blog::find($blog_id);
+        //if($blog_id > Blog::all()->last()->id)
+            //abort(404);
+        $blog = Blog::findOrFail($blog_id);
         if($blog_id === '1')
             $lastblog = $blog;
         else
@@ -20,7 +22,7 @@ class BlogController extends Controller
         return view('blog.show', compact('blog', 'lastblog', 'nextblog'));
     }
     public function showlist(Request $request) {
-        $blogs = Blog::all();
+        $blogs = Blog::paginate(10);
         $name = '博客列表';
         return view('blog.list', compact('blogs', 'name'));
     }

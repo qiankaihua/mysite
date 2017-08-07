@@ -9,4 +9,9 @@
         <a href= {{ "/blog/".$blog->id }}>view more</a>
         <hr>
     @endforeach
+    <div id="pull_right">
+       <div class="pull-right">
+          {!! $blogs->links() !!}
+       </div>
+    </div>
 @endsection

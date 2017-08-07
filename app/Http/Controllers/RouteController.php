@@ -13,7 +13,7 @@ class RouteController extends Controller
         return view('admin');
     }
     public function showindex() {
-        $blogs = Blog::all()->take(5);
+        $blogs = Blog::all()->reverse()->take(5);
         $newblog = Blog::all()->last();
         if($newblog == null) {
             $newblog = new Blog;
