@@ -15,6 +15,11 @@ class RouteController extends Controller
     public function showindex() {
         $blogs = Blog::all()->take(5);
         $newblog = Blog::all()->last();
+        if($newblog == null) {
+            $newblog = new Blog;
+            $newblog->title = '暂时不存在Blog';
+            $newblog->content = '';
+        }
         return view('index', compact('newblog', 'blogs'));
     }
     /*
