@@ -20,9 +20,11 @@ Route::get('mydetail', function () {
 });
 
 //管理页面
-Route::get('admin', function () {
-    return view('admin.admin');
-});
+Route::get('admin', 'RouteController@showadmin');
+
+Route::get('admin/blog', 'RouteController@showadminbloglist');
+
+Route::get('admin/blog/{blog_id}', 'RouteController@showadminblog');
 
 //添加blog
 Route::any('addblog', function () {

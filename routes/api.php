@@ -20,6 +20,12 @@ use Illuminate\Http\Request;
 
 Route::post('/blog/add', 'BlogController@store');
 
+Route::delete('/blog/{blog_id}', 'BlogController@delete');
+
+Route::post('/blog/{blog_id}', 'BlogController@restore');
+
+Route::put('/blog/{blog_id}', 'BlogController@change');
+
 /*
 Route::get('/blog/{blog_id}', '');
 

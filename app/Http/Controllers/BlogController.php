@@ -30,12 +30,26 @@ class BlogController extends Controller
         $blog = new Blog;
         $blog->title = $request->title;
         $blog->content = $request->content;
+        if(isset($request['intro']))
+            $blog->intro = $request->intro;
         $blog->save();
         return $blog;
     }
     public function delete(Request $request, $blog_id) {
         $blog = Blog::find($blog_id);
-        $blog->deletes();
+        $blog->delete();
+        return [];
+    }
+    public function restore(Request $request, $blog_id) {
+        $blog = Blog::onlyTrashed()->find($blog_id);
+        $blog->restore();
         return $blog;
+    }
+    public function change(Request $request, $blog_id) {
+        $blog = Blog::find($blog_id);
+        $blog->title = $request->title;
+        $blog->content = $request->content;
+        $blog->intro = $request->intro;
+        $blog->save();
     }
 }

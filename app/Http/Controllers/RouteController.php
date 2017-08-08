@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 class RouteController extends Controller
 {
     public function showadmin() {
-        //$blogs = Blog::where('id', '>', '0')->all();
-        //return view('admin', $blogs);
-        return view('admin');
+        return view('admin.admin');
     }
     public function showindex() {
         $blogs = Blog::all()->reverse()->take(5);
@@ -21,6 +19,14 @@ class RouteController extends Controller
             $newblog->content = '';
         }
         return view('index', compact('newblog', 'blogs'));
+    }
+    public function showadminbloglist() {
+        $blogs = Blog::withTrashed()->paginate(10);
+        return view('admin.blog.bloglist', compact('blogs'));
+    }
+    public function showadminblog(Request $request, $blog_id) {
+        $blog = Blog::withTrashed()->find($blog_id);
+        return view('admin.blog.blog', compact('blog'));
     }
     /*
     public function showlist() {
