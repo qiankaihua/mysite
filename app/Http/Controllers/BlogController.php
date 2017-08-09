@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Blog;
 use Illuminate\Http\Request;
 
@@ -14,11 +15,11 @@ class BlogController extends Controller
         if($blog_id === '1')
             $lastblog = $blog;
         else
-            $lastblog = Blog::find($blog_id - 1);
+            $lastblog = Blog::where('id', '<', $blog_id)->get()->last();
         if($blog_id == Blog::all()->last()->id)
             $nextblog = $blog;
         else
-            $nextblog = Blog::find($blog_id + 1);
+            $nextblog = Blog::where('id', '>', $blog_id)->first();
         return view('blog.show', compact('blog', 'lastblog', 'nextblog'));
     }
     public function showlist(Request $request) {
@@ -28,10 +29,10 @@ class BlogController extends Controller
     }
     public function store(Request $request) {
         $blog = new Blog;
-        $blog->title = $request->title;
-        $blog->content = $request->content;
+        $blog->title = clean($request->title);
+        $blog->content = clean($request->content);
         if(isset($request['intro']))
-            $blog->intro = $request->intro;
+            $blog->intro = clean($request->intro);
         $blog->save();
         return $blog;
     }

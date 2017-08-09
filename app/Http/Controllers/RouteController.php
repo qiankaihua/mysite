@@ -28,6 +28,10 @@ class RouteController extends Controller
         $blog = Blog::withTrashed()->find($blog_id);
         return view('admin.blog.blog', compact('blog'));
     }
+    public function changeblog(Request $request, $blog_id) {
+        $blog = Blog::withTrashed()->find($blog_id);
+        return view('admin.blog.update', compact('blog'));
+    }
     /*
     public function showlist() {
         $title = 'titl<a href="https://www.baidu.com/">e1</a>';
