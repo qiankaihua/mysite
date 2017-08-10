@@ -1,8 +1,12 @@
 <!--引入样式文件->
         <link rel="stylesheet" href="/editor.md-master/examples/css/style.css" />
-        <link rel="stylesheet" href="/editor.md-master/css/editormd.preview.css" />
+        <link rel="stylesheet" href="/editor.md-master/css/editormd.preview.css" /-->
+        <link rel="stylesheet" href="/editor.md-master/css/editormd.css" />
+        <!--link rel="stylesheet" href="/css/bootstrap.min.css"-->
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/fontAwesome.css">
 
-        <!-引入js文件->
+        <!--引入js文件->
         <script src="/editor.md-master/examples/js/jquery.min.js"></script>
         <script src="/editor.md-master/lib/marked.min.js"></script>
         <script src="/editor.md-master/lib/prettify.min.js"></script>
@@ -26,7 +30,7 @@
 <div class="cd-full-width container row col-md-12 content first-content" style="margin-top: 80px !important; margin: 0 auto">
         <h1>{{ $blog->title }}</h1>
         <hr style="margin-top: 20px">
-        <div style="text-align: left; margin-top: 20px">
+        <div class="markdown-body editormd-preview-container" style="text-align: left; margin-top: 20px">
         {!! $blog->content !!}
         </div>
         <!--div id="testEditorMdview">

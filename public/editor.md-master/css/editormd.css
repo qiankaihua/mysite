@@ -3500,6 +3500,10 @@
   line-height: 1.1;
 }
 
+.markdown-body p {
+  margin: 0 !important;
+}
+
 .markdown-body p,
 .markdown-body blockquote,
 .markdown-body ul,
@@ -3841,7 +3845,9 @@
   padding-left: 20px;
   margin-left: 0;
   font-size: 14px;
+  /*
   font-style: italic;
+  */
 }
 .editormd-preview-container p code, .editormd-html-preview p code {
   margin-left: 5px;
