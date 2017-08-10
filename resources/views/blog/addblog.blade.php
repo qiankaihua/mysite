@@ -22,13 +22,13 @@
 var testEditor;
 $(function() {
     testEditor = editormd("content", {
+        name : 'content',
         width   : "1000px",
         height  : 640,
         syncScrolling : "full",
         path    : "/editor.md-master/lib/",
         previewTheme : "dark",
         saveHTMLToTextarea : true,
-        name : 'content',
 
         emoji: true,//emoji表情，默认关闭
         taskList: true,
@@ -37,7 +37,7 @@ $(function() {
 
         flowChart: true,//开启流程图支持，默认关闭
         sequenceDiagram: true,//开启时序/序列图支持，默认关闭,
-
+/*
         dialogLockScreen : false,//设置弹出层对话框不锁屏，全局通用，默认为true
         dialogShowMask : false,//设置弹出层对话框显示透明遮罩层，全局通用，默认为true
         dialogDraggable : false,//设置弹出层对话框不可拖动，全局通用，默认为true
@@ -45,7 +45,7 @@ $(function() {
         dialogMaskBgColor : "#000",//设置透明遮罩层的背景颜色，全局通用，默认为#fff
 
         codeFold: true,
-
+*/
 
         imageUpload : true,
         imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],

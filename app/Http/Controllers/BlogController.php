@@ -29,8 +29,13 @@ class BlogController extends Controller
     }
     public function store(Request $request) {
         $blog = new Blog;
-        $blog->title = clean($request->title);
-        $blog->content = clean($request->content);
+        //return $request->title;
+        //return $request;
+        //$blog->title = clean($request->title);
+        $blog->title = $request->title;
+        //return $blog;
+        $blog->content_html = $request->content;
+        $blog->content = clean($request['content-html-code']);
         if(isset($request['intro']))
             $blog->intro = clean($request->intro);
         $blog->save();
@@ -49,8 +54,11 @@ class BlogController extends Controller
     public function change(Request $request, $blog_id) {
         $blog = Blog::find($blog_id);
         $blog->title = $request->title;
-        $blog->content = $request->content;
-        $blog->intro = $request->intro;
+        $blog->content_html = $request->content;
+        $blog->content = clean($request['content-html-code']);
+        if(isset($request['intro']))
+            $blog->intro = clean($request->intro);
         $blog->save();
+        return $blog;
     }
 }

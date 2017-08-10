@@ -26,6 +26,8 @@ Route::get('admin/blog', 'RouteController@showadminbloglist');
 
 Route::get('admin/blog/{blog_id}', 'RouteController@showadminblog');
 
+Route::get('admin/blog/update/{blog_id}', 'RouteController@changeblog');
+
 //添加blog
 Route::any('addblog', function () {
     return view('blog.addblog');

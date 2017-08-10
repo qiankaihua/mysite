@@ -198,7 +198,7 @@ function isMobile(){
                           <div class="col-md-5">
                             <div class="right-feature-text">
                               <h4>最新日志: <em>{{$newblog->title}}</em></h4>
-                              <p>{!! str_limit($newblog->content, $limit = 10, $end = '...') !!}</p>
+                              <p>{{ str_limit($newblog->content, $limit = 50, $end = '...') }}</p>
                               <div class="feature-list">
                                 <ul>
                                   @foreach($blogs as $blog)
