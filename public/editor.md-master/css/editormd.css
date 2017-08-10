@@ -3500,6 +3500,10 @@
   line-height: 1.1;
 }
 
+.css .hljs-rules, .css .hljs-value, .css .hljs-function .hljs-preprocessor, .hljs-pragma {
+  color: #d14 !important;
+}
+
 .markdown-body p {
   margin: 0 !important;
 }
