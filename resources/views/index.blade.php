@@ -125,6 +125,7 @@ function isMobile(){
                         <h4>关于网站</h4>
                         <p>始建于2017.08.06，现仅有主页供浏览，功能正在逐步更新中......</p>
                         <p>2017.08.07,增加blog页面</p>
+                        <p>2017.08.11,增加markdown格式编辑</p>
                         <div class="primary-button">
                           <!--a href="#">Discover More</a-->
                         </div>
