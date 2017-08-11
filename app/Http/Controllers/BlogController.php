@@ -29,6 +29,7 @@ class BlogController extends Controller
     }
     public function store(Request $request) {
         $blog = new Blog;
+        $blog->user_id = 1;
         //return $request->title;
         //return $request;
         //$blog->title = clean($request->title);
