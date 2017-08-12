@@ -13,7 +13,13 @@ class CreateImgTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('image', function (Blurprint $table) {
+            $table->increments('id');
+            $table->string('url');
+            $table->string('intro');
+            $table->softDeletes();
+            $talbe->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreateImgTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('img');
     }
 }

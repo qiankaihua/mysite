@@ -23,4 +23,11 @@ class ImageController extends Controller
         header('Content-Type:application/json;charset=utf8');
         exit(json_encoed($data));
     }
+    //
+    //
+    //
+    //
+    public function store(Request $request) {
+        return [];
+    }
 }

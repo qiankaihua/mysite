@@ -28,6 +28,8 @@ Route::get('admin/blog/{blog_id}', 'RouteController@showadminblog');
 
 Route::get('admin/blog/update/{blog_id}', 'RouteController@changeblog');
 
+Route::get('admin/image', 'RouteController@showadminimagelist');
+
 //添加blog
 Route::any('addblog', function () {
     return view('blog.addblog');
@@ -38,6 +40,9 @@ Route::any('blog/bloglist', 'BlogController@showlist');
 
 //获取blog详情
 Route::get('blog/{id}','BlogController@show');
+
+//获取image列表
+Route::any('image/imagelist', 'ImageController@showlist');
 
 //登录
 Route::get('login', function () {

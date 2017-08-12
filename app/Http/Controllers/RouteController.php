@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class RouteController extends Controller
 {
-    public function showadmin() {
-        return view('admin.admin');
-    }
     public function showindex() {
         $blogs = Blog::all()->reverse()->take(5);
         $newblog = Blog::all()->last();
@@ -19,6 +16,12 @@ class RouteController extends Controller
             $newblog->content = '';
         }
         return view('index', compact('newblog', 'blogs'));
+    }
+
+
+
+    public function showadmin() {
+        return view('admin.admin');
     }
     public function showadminbloglist() {
         $blogs = Blog::withTrashed()->paginate(10);
@@ -32,15 +35,11 @@ class RouteController extends Controller
         $blog = Blog::withTrashed()->find($blog_id);
         return view('admin.blog.update', compact('blog'));
     }
-    /*
-    public function showlist() {
-        $title = 'titl<a href="https://www.baidu.com/">e1</a>';
-        $intro = 'in<sup>tro</sup>';
-        return view('blog.list', [
-            'title' => $title,
-            'intro' => $intro,
-        ]);
+
+
+
+    public function showadminimagelist(Request $request) {
+        
     }
-    */
 
 }

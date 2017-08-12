@@ -16,8 +16,6 @@ use Illuminate\Http\Request;
 
 //blog
 
-//Route::get('/bloglist', '');
-
 Route::post('/blog/add', 'BlogController@store');
 
 Route::delete('/blog/{blog_id}', 'BlogController@delete');
@@ -28,10 +26,10 @@ Route::put('/blog/{blog_id}', 'BlogController@change');
 
 Route::post('/uploadimage', 'ImageController@uploadimage');
 
-/*
-Route::get('/blog/{blog_id}', '');
+//img
 
-Route::delete('/blog/{blog_id}', '');
+Route::post('/image/add', 'ImageController@store');
 
-Route::put('/blog/{blog_id}', '');
-*/
+Route::delete('/image/{img_id}', 'ImageController@delete');
+
+Route::put('/image/{img_id}', 'ImageController@change');
