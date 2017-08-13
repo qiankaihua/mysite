@@ -87,8 +87,8 @@ function isMobile(){
         <div class="overlay"></div>
         @if(!isMobile())
         <section class="top-part">
-          <video controls autoplay loop>
-            <source src="videos/video.mp4" type="video/mp4">
+          <video controls autoplay loop style="margin-top: -100px;">
+            <source src="videos/bj.mp4" type="video/mp4">
             <source src="videos/video.ogg" type="video/ogg">
           Your browser does not support the video tag.
           </video>

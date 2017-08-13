@@ -28,6 +28,9 @@ class ImageController extends Controller
     //
     //
     public function store(Request $request) {
-        return [];
+        $path = $request->file('img')->store('imgs');
+        $img = new Img;
+        $img->url = $path;
+        $img->save();
     }
 }
