@@ -13,7 +13,7 @@
     @endforeach
     <div id="pull_right">
        <div class="pull-right">
-          {!! $blogs->links() !!}
+          {{ $blogs->links() }}
        </div>
     </div>
 @endsection

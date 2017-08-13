@@ -13,12 +13,14 @@ class CreateImgTable extends Migration
      */
     public function up()
     {
-        Schema::create('image', function (Blurprint $table) {
+        Schema::create('image', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('album_id');
             $table->string('url');
             $table->string('intro');
             $table->softDeletes();
-            $talbe->timestamps();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +31,6 @@ class CreateImgTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('img');
+        Schema::dropIfExists('image');
     }
 }

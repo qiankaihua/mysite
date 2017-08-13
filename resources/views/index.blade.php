@@ -234,30 +234,20 @@ function isMobile(){
                     <div class="col-md-12">
                       <div class="content fourth-content">
                         <div class="row">
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-01.jpg" data-lightbox="image-1"><img src="img/project-item-01.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-02.jpg" data-lightbox="image-1"><img src="img/project-item-02.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-03.jpg" data-lightbox="image-1"><img src="img/project-item-03.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-05.jpg" data-lightbox="image-1"><img src="img/project-item-05.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-06.jpg" data-lightbox="image-1"><img src="img/project-item-06.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-07.jpg" data-lightbox="image-1"><img src="img/project-item-07.jpg"></a>
-                          </div>
-                          <div class="col-md-3 project-item">
-                            <a href="img/item-08.jpg" data-lightbox="image-1"><img src="img/project-item-08.jpg"></a>
-                          </div>
+                          @if($img_title != null)
+                            <div class="col-md-3 project-item">
+                              <p>{{ $img_title }}</p>
+                            </div>
+                          @else
+                            @foreach($imgs as $img)
+                              <div class="col-md-3 project-item">
+                              <a href= {{ $img->url }} data-lightbox="image-1"><img src= {{ $img->url }} ></a>
+                              </div>
+                            @endforeach
+                          @endif
+                        </div>
+                        <div class="primary-button">
+                                <a href="/image/imglist">Discover More</a>
                         </div>
                       </div>
                     </div>

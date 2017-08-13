@@ -33,3 +33,5 @@ Route::post('/image/add', 'ImageController@store');
 Route::delete('/image/{img_id}', 'ImageController@delete');
 
 Route::put('/image/{img_id}', 'ImageController@change');
+
+Route::post('/image/{img_id}', 'ImageController@restore');
