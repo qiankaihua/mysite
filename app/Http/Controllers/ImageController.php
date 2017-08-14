@@ -59,6 +59,11 @@ class ImageController extends Controller
         return [];
     }
     public function change(Request $request, $img_id) {
-        //
+        $img = Img::find($img_id);
+        if(isset($request['intro']) && $request->intro != '') {
+            $img->intro = $request->intro;
+        }
+        $img->save();
+        return $img;
     }
 }

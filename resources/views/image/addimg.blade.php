@@ -5,7 +5,7 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>create new blog</title>
+        <title>post new image</title>
         <meta name="description" content="qiankaihua's personal site">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
