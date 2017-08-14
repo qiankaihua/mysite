@@ -29,6 +29,8 @@ class RouteController extends Controller
     public function showadmin() {
         return view('admin.admin');
     }
+
+
     public function showadminbloglist() {
         $blogs = Blog::withTrashed()->paginate(10);
         return view('admin.blog.bloglist', compact('blogs'));
@@ -43,10 +45,16 @@ class RouteController extends Controller
     }
 
 
-
     public function showadminimagelist(Request $request) {
         $imgs = Img::withTrashed()->paginate(15);
+        foreach($imgs as $img) {
+            $img->url = asset($img->url);
+        }
         return view('admin.image.imagelist', compact('imgs'));
     }
-
+    public function changeimage(Request $request, $img_id) {
+        $img = Img::withTrashed()->find($img_id);
+        $img->url = asset($img->url);
+        return view('admin.image.update', compact('img'));
+    }
 }

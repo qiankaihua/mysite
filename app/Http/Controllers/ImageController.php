@@ -48,4 +48,17 @@ class ImageController extends Controller
         $img->save();
         return $img;
     }
+    public function restore(Request $request, $img_id) {
+        $img = Img::onlyTrashed()->find($img_id);
+        $img->restore();
+        return $img;
+    }
+    public function delete(Request $request, $img_id) {
+        $img = Img::find($img_id);
+        $img->delete();
+        return [];
+    }
+    public function change(Request $request, $img_id) {
+        //
+    }
 }

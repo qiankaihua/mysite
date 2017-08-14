@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('/uploadimage', 'ImageController@uploadimage');
 
 //blog
 
@@ -24,7 +25,6 @@ Route::post('/blog/{blog_id}', 'BlogController@restore');
 
 Route::put('/blog/{blog_id}', 'BlogController@change');
 
-Route::post('/uploadimage', 'ImageController@uploadimage');
 
 //img
 
