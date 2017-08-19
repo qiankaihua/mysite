@@ -9,7 +9,7 @@
             <input type="submit" value="上传新图片">
         </form>
         @foreach($imgs as $img)
-            <img src= {{ $img->url }} alt= {{"第".$img->id."张图片"}}>
+            <img src= {{ $img->url }} alt= {{"第".$img->id."张图片"}} style="max-height: 500px">
             <p> {{$img->intro}} </p>
             @if($img->deleted_at === null)
             <form action={{"/api/image/".$img->id}} method="post">
