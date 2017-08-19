@@ -126,6 +126,7 @@ function isMobile(){
                         <p>始建于2017.08.06，现仅有主页供浏览，功能正在逐步更新中......</p>
                         <p>2017.08.07,增加blog页面</p>
                         <p>2017.08.11,增加markdown格式编辑</p>
+                        <p>2017.08.19,增加照片管理</p>
                         <div class="primary-button">
                           <!--a href="#">Discover More</a-->
                         </div>
@@ -135,7 +136,6 @@ function isMobile(){
                 </div>
               </div>
             </li>
-            <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
 
             <li>
               <div class="heading">

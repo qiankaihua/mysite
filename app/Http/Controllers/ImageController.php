@@ -44,7 +44,7 @@ class ImageController extends Controller
         //$img->intrp = clean($request->intro);
         $img->intro = $request->intro;
         $img->url = str_replace("public/", "", $img->url);
-        $img->url = 'storage/'.$img->url;
+        $img->url = '/storage/'.$img->url;
         $img->save();
         return $img;
     }
