@@ -180,6 +180,7 @@ return [
 
         Mews\Purifier\PurifierServiceProvider::class,
         'YuanChao\Editor\EndaEditorServiceProvider',
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
     ],
 
     /*

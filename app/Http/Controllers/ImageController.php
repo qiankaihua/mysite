@@ -33,7 +33,13 @@ class ImageController extends Controller
         $imgs = Img::paginate(15);
         return view('image.list', compact('name', 'imgs'));
     }
-
+    /**
+    * 图片上传保存
+    *
+    * 参数
+    *
+    * @param Illuminate\Http\Request $request
+    */
     public function store(Request $request) {
         $path = $request->file('file')->store('public/imgs');
         
