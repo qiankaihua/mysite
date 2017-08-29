@@ -10,7 +10,7 @@
         </form>
         @foreach($blogs as $blog)
             <h1>{!! $blog->title !!}</h1>
-            <p>{!! str_limit($blog->content, $limit = 50, $end = '...') !!}</p>
+            <p>{{ str_limit($blog->content_html, $limit = 50, $end = '...') }}</p>
             <a href= {{ "/admin/blog/".$blog->id }}>view more</a>
             @if($blog->deleted_at === null)
             <form action={{"/api/blog/".$blog->id}} method="post">
