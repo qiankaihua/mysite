@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zh-CN"><script src="http://code.jquery.com/jquery-latest.js"></script>
+<html class="no-js" lang="zh-CN"><script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel='stylesheet' href="/css/all.css" type='text/css' media='all'/>
     <script type='text/javascript' src="/js/all.js"></script>
     <link rel="stylesheet" href="/css/templatemo-style.css">
@@ -10,8 +10,8 @@
 
         <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="/css/fontAwesome.css">
-<!--link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet"-->  
-<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<!--link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet"-->  
+<script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
 <body style="background-color: #afafaf">
 <div style="text-align: center">

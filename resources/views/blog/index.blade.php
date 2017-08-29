@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zh-CN">
 <head>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel='stylesheet' href="/css/all.css" type='text/css' media='all'/>
     <script type='text/javascript' src="/js/all.js"></script>
     <link rel="stylesheet" href="/css/templatemo-style.css">

@@ -1,4 +1,4 @@
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="/editor.md-master/editormd.min.js"></script>
 <link rel="stylesheet" href="/editor.md-master/css/editormd.css" />
 <script src="/editor.md-master/editormd.js"></script>

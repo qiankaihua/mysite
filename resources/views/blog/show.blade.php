@@ -16,8 +16,8 @@
         <script src="/editor.md-master/lib/flowchart.min.js"></script>
         <script src="/editor.md-master/lib/jquery.flowchart.min.js"></script>
         <script src="/editor.md-master/editormd.js"></script-->
-<link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
-<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<link href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+<script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
 
 @extends('blog.index')

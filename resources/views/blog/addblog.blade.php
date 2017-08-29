@@ -1,7 +1,7 @@
 <!doctype html>
 
     <head>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>create new blog</title>
