@@ -12,14 +12,15 @@
 */
 
 //主页
+
 Route::get('/', 'RouteController@showindex');
 
 //我的信息
-Route::get('mydetail', function () {
-    return view('mydetail');
-});
+
+Route::get('mydetail', 'UserController@show');
 
 //管理页面
+
 Route::get('admin', 'RouteController@showadmin');
 
 Route::get('admin/blog', 'RouteController@showadminbloglist');
@@ -33,25 +34,37 @@ Route::get('admin/image', 'RouteController@showadminimagelist');
 Route::get('admin/image/{img_id}', 'RouteController@changeimage');
 
 //添加图片
+
 Route::any('addimg', function () {
     return view('image.addimg');
 });
 
 //添加blog
+
 Route::any('addblog', function () {
     return view('blog.addblog');
 });
 
 //获取blog列表
+
 Route::any('blog/bloglist', 'BlogController@showlist');
 
 //获取blog详情
+
 Route::get('blog/{id}','BlogController@show');
 
 //获取image列表
+
 Route::any('image/imglist', 'ImageController@showlist');
 
 //登录
+
 Route::get('login', function () {
     return view('login');
+});
+
+//注册
+
+Route::get('register', function () {
+    return view('register');
 });

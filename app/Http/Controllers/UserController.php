@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Ramsey\Uuid\Uuid;
 use Carbon\Carbon;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class UserController extends Controller
 {
@@ -56,8 +57,12 @@ class UserController extends Controller
         }
         else abert(401);
     }
+    public function show(Request $request, $user_id) {
+        $user = User::find($user_id);
+        return view('mydetail', compact('user'));
+    }
     /*
-    public function addAdmin(Requset $request) {
+    public function addAdmin(Request $request) {
 
     }
     */

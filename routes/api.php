@@ -15,6 +15,12 @@ use Illuminate\Http\Request;
 
 Route::post('/uploadimage', 'ImageController@uploadimage');
 
+//user
+
+Route::post('/login', 'UserController@login');
+
+Route::post('/register', 'UserController@register');
+
 //blog
 
 Route::post('/blog/add', 'BlogController@store');
