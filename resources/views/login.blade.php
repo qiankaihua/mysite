@@ -18,7 +18,13 @@
 <body style="background-color: #afafaf">
 
 <div id="">
-    @yield('content')
+    <div style="background-color: #dfdfdf; height: 200px;text-align:center;width:100%;margin: 20px;">
+        <form action="api/login" method="post">
+            <input type="text" name="username" placeholder="用户名" required style="margin: 20px;"><br>
+            <input type="password" name="password" placeholder="密码" required style="margin: 20px;"><br>
+            <input type="submit" name="submit" value="登录" style="margin: 20px;">
+        </form>
+    </div>
     <div id="return-index">
         <li class="menu-item">
             <a href="/">返回首页</a>

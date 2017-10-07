@@ -11,12 +11,13 @@ class User extends Authenticatable
     use Notifiable;
     use SoftDeletes;
 
+    protected $table = 'user';
     protected $hidden = [
         'password', 'admin',
     ];
 
     public function apiTokens() {
-        return $this.hasMany('App\ApiToken', 'user_id', 'id');
+        return $this->hasMany('App\ApiToken', 'user_id', 'id');
     }
     /*
     public function comment() {

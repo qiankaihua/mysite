@@ -19,17 +19,19 @@ class UserController extends Controller
 
     public function register(Request $request) {
         $this->validate($request, [
-            'username' => 'required|string|unique: user, username',
-            'email' => 'required|email|unique: user, email',
-            'password' => 'required|string|min: 6|max: 32',
-            'gender' => 'required|boolean',
-            'realname' => 'required|string|unique: user, realname|max: 100',
+            'username' => 'required|string|unique:user,username',
+            'email' => 'required|email|unique:user,email',
+            'password' => 'required|string|min:6|max:32',
+            'gender' => 'required|string|in:true,false',
+            'realname' => 'required|string|unique:user,realname|max:100',
         ]);
         $user = new User;
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->realname = $request->realname;
+        if($request->gender === 'true') $request->gender = true;
+        else $request->gender = false;
         $user->gender = $request->gender;
         $user->nickname = $request->nickname ? $request->nickname : null;
         $user->admin = false;
@@ -39,11 +41,12 @@ class UserController extends Controller
     public function login(Request $request) {
         if(Auth::attempt([
             'username' => $request->username,
+            //'email' => $request->email,
             //'password' => bcrypt($request->password),
             'password' => $request->password,
         ])) {
             $user = Auth::user();
-            if(! $user) abert(401);
+            if(! $user) abort(401);
             $apiToken = new ApiToken;
             $apiToken->token = Uuid::uuid4()->toString();
             $apiToken->ip = $request->server('REMOTE_ADDR', null);
@@ -55,7 +58,7 @@ class UserController extends Controller
                 'username' => $user->username,
             ]);
         }
-        else abert(401);
+        else abort(401);
     }
     public function show(Request $request, $user_id) {
         $user = User::find($user_id);

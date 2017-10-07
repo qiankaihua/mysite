@@ -18,7 +18,7 @@
 <body style="background-color: #afafaf">
 
 <div>
-    <div style="background-color: #dfdfdf; height: 500px;text-align:center;width:100%;">
+    <div style="background-color: #dfdfdf; height: 500px;text-align:center;width:100%;margin: 20px; ">
         <form id="register" action="api/register" method="post">
             <input type="text" name="username" placeholder="用户名" autofocus required style="margin:20px;"><br>
             <input type="password" name="password" placeholder="密码" required style="margin:20px;"><br>
@@ -26,7 +26,7 @@
             <input type="text" name="realname" placeholder="真实姓名" required style="margin:20px;"><br>
             <input type="radio" name="gender" value=true required style="margin:20px;">男
             <input type="radio" name="gender" value=false required style="margin:20px;">女<br>
-            <input type="submit" name="submit" value="登录" style="margin:20px;">
+            <input type="submit" name="submit" value="注册" style="margin:20px;">
         </form>
     </div>
     <a href="/">返回首页</a>
