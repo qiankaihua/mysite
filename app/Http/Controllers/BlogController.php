@@ -36,7 +36,7 @@ class BlogController extends Controller
         //$blog->title = clean($request->title);
         $blog->title = $request->title;
         //return $blog;
-        $blog->content_html = $request->content;
+        $blog->content_html = $request->contents;
         $blog->content = clean($request['content-html-code']);
         if(isset($request['intro']))
             $blog->intro = clean($request->intro);
@@ -56,7 +56,7 @@ class BlogController extends Controller
     public function change(Request $request, $blog_id) {
         $blog = Blog::find($blog_id);
         $blog->title = $request->title;
-        $blog->content_html = $request->content;
+        $blog->content_html = $request->contents;
         $blog->content = clean($request['content-html-code']);
         if(isset($request['intro']))
             $blog->intro = clean($request->intro);

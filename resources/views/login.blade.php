@@ -18,11 +18,14 @@
 <body style="background-color: #afafaf">
 
 <div id="">
-    <div style="background-color: #dfdfdf; height: 200px;text-align:center;width:100%;margin: 20px;">
+    <div style="background-color: #dfdfdf; height: 300px;text-align:center;width:100%;margin: 20px;">
         <form action="api/login" method="post">
             <input type="text" name="username" placeholder="用户名" required style="margin: 20px;"><br>
             <input type="password" name="password" placeholder="密码" required style="margin: 20px;"><br>
             <input type="submit" name="submit" value="登录" style="margin: 20px;">
+        </form>
+        <form action="/register">
+            <input type="submit" value="立即注册">
         </form>
     </div>
     <div id="return-index">

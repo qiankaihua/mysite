@@ -22,12 +22,12 @@ class Check
     {
         $apiToken = ApiToken::where('token', '=', $request->apiToken)->first();
         $user = User::where('username', '=', $request->username)->first();
-        if(!$apiToken || !$user) abort(401);
-        if($user->id === $apiToken->user_id && $apiToken->expired_at >= Carbon::now() && $apiToken->ip === $request->server('REMOTE_ADDR', null)) {
+        if(!$apiToken || !$user) return view('login'); //abort(401);
+        if($user->id === $apiToken->user_id && $apiToken->expired_at >= Carbon::now() && $apiToken->ip === $request->server('HTTP_X_FORWARDED_FOR', $request->server('REMOTE_ADDR', null))) {
             $apiToken->expired_at = Carbon::now()->addMinutes(30);
             $apiToken->save();
             return $next($request);
         }
-        else abort(401);
+        else return view('login'); //abort(401);
     }
 }

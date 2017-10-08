@@ -13,30 +13,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body style="background-color: #afafaf">
 
-<div>
-    <div style="background-color: #dfdfdf; height: 500px;text-align:center;width:100%;margin: 20px; ">
-        <form id="register" action="api/register" method="post">
-            <input type="text" name="username" placeholder="用户名" autofocus required style="margin:20px;"><br>
-            <input type="password" name="password" placeholder="密码" required style="margin:20px;"><br>
-            <input type="text" name="email" placeholder="e-mail" required style="margin:20px;"><br>
-            <input type="text" name="realname" placeholder="真实姓名" required style="margin:20px;"><br>
-            <input type="radio" name="gender" value=true required style="margin:20px;">男
-            <input type="radio" name="gender" value=false required style="margin:20px;">女<br>
-            <input type="submit" name="submit" value="注册" style="margin:20px;">
-        </form>
-    </div>
+<div id="">
+
     <div id="return-index">
         <li class="menu-item">
             <a href="/">返回首页</a>
         </li>
     </div>
 </div>
-    <footer>
-      <p>Copyright &copy; 2017 Qian Kaihua </p>
-    </footer>
+<footer>
+    <p>Copyright &copy; 2017 Qian Kaihua </p>
+</footer>
 </body>
 </html>

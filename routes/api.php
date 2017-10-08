@@ -31,7 +31,6 @@ Route::post('/blog/{blog_id}', 'BlogController@restore');
 
 Route::put('/blog/{blog_id}', 'BlogController@change');
 
-
 //img
 
 Route::post('/image/add', 'ImageController@store');

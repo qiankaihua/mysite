@@ -36,6 +36,7 @@ class UserController extends Controller
         $user->nickname = $request->nickname ? $request->nickname : null;
         $user->admin = false;
         $user->save();
+        return view('login');
         return $user;
     }
     public function login(Request $request) {
@@ -49,9 +50,11 @@ class UserController extends Controller
             if(! $user) abort(401);
             $apiToken = new ApiToken;
             $apiToken->token = Uuid::uuid4()->toString();
-            $apiToken->ip = $request->server('REMOTE_ADDR', null);
+            $apiToken->ip = $request->server('HTTP_X_FORWARDED_FOR', $request->server('REMOTE_ADDR', null));
             $apiToken->expired_at = $request->remember_me ? null : Carbon::now()->addMinutes(30);
             $user->apiTokens()->save($apiToken);
+            return redirect('/');
+            return back();
             return response([
                 'status' => Auth::check(),
                 'apiToken' => $apiToken->token,
@@ -62,7 +65,11 @@ class UserController extends Controller
     }
     public function show(Request $request, $user_id) {
         $user = User::find($user_id);
-        return view('mydetail', compact('user'));
+        $user_login = Auth::user();
+        if($user->id === $user_login->id)
+            return view('user.mydetail', compact('user'));
+        else
+            return view('user.others', compact('user'));
     }
     /*
     public function addAdmin(Request $request) {

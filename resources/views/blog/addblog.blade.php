@@ -24,7 +24,7 @@ $(function() {
     testEditor = editormd("content", {
         name : 'content',
         width   : "1000px",
-        height  : 640,
+        height  : "640px",
         syncScrolling : "full",
         path    : "/editor.md-master/lib/",
         previewTheme : "dark",

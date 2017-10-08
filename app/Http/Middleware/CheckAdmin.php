@@ -20,6 +20,8 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
+        $user = User::where('username', '=', $request->username)->first();
+        if($user->admin !== 1) abort(403);
         return $next($request);
     }
 }

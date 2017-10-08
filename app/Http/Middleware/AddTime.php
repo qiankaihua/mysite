@@ -21,7 +21,7 @@ class AddTime
     public function handle($request, Closure $next)
     {
         if(isset($request->username) && isset($request->apiToken)) {
-            if($user->id === $apiToken->user_id && $apiToken->expired_at >= Carbon::now() && $apiToken->ip === $request->server('REMOTE_ADDR', null)) {
+            if($user->id === $apiToken->user_id && $apiToken->expired_at >= Carbon::now() && $apiToken->ip === $request->server('HTTP_X_FORWARDED_FOR', $request->server('REMOTE_ADDR', null))) {
                 $apiToken->expired_at = Carbon::now()->addMinutes(30);
                 $apiToken->save();
                 return $next($request);
