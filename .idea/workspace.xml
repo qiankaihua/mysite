@@ -1,66 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ddb5c83-fbee-4916-b882-14b0e2087a19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/others.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/css/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/docs/css/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/images/logo.png" afterPath="$PROJECT_DIR$/public/docs/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/images/navbar.png" afterPath="$PROJECT_DIR$/public/docs/images/navbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/images/logo.png" afterPath="$PROJECT_DIR$/public/docs/source/assets/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/images/navbar.png" afterPath="$PROJECT_DIR$/public/docs/source/assets/images/navbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mysite.iml" afterPath="$PROJECT_DIR$/.idea/mysite.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ApiToken.php" afterPath="$PROJECT_DIR$/app/ApiToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/AddTime.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/AddTime.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Check.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Check.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_08_19_063049_create_apiToken_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_08_19_063049_create_apiToken_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/collection.json" afterPath="$PROJECT_DIR$/public/docs/collection.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/docs/css/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/css/style.css" afterPath="$PROJECT_DIR$/public/docs/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/index.html" afterPath="$PROJECT_DIR$/public/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/js/all.js" afterPath="$PROJECT_DIR$/public/docs/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/.compare.md" afterPath="$PROJECT_DIR$/public/docs/source/.compare.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/.gitignore" afterPath="$PROJECT_DIR$/public/docs/source/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/energize.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/energize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/highlight.min.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/imagesloaded.min.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/imagesloaded.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery.highlight.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery.highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery.min.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery.tocify.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery.tocify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery_ui.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/jquery_ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/lib/lunr.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/lib/lunr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/js/script.js" afterPath="$PROJECT_DIR$/public/docs/source/assets/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/_icon_font.styl" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/_icon_font.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/_monokai.css" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/_monokai.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/_normalize.css" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/_normalize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/_variables.styl" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/_variables.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/assets/stylus/style.styl" afterPath="$PROJECT_DIR$/public/docs/source/assets/stylus/style.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/config.php" afterPath="$PROJECT_DIR$/public/docs/source/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/gulpfile.js" afterPath="$PROJECT_DIR$/public/docs/source/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/includes/_errors.md" afterPath="$PROJECT_DIR$/public/docs/source/includes/_errors.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/index.md" afterPath="$PROJECT_DIR$/public/docs/source/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/docs/source/package.json" afterPath="$PROJECT_DIR$/public/docs/source/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/blog/addblog.blade.php" afterPath="$PROJECT_DIR$/resources/views/blog/addblog.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
-    </list>
+    <list default="true" id="3ddb5c83-fbee-4916-b882-14b0e2087a19" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -349,12 +290,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507194769712</updated>
       <workItem from="1507194771887" duration="45000" />
-      <workItem from="1507342533961" duration="7859000" />
+      <workItem from="1507342533961" duration="7976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7904000" />
+    <option name="totallyTimeSpent" value="8021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
