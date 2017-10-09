@@ -22,7 +22,7 @@
 var testEditor;
 $(function() {
     testEditor = editormd("content", {
-        name : 'content',
+        name : "content",
         width   : "1000px",
         height  : "640px",
         syncScrolling : "full",
